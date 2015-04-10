@@ -13,8 +13,7 @@ $(document).ready(function(){
 	 	if (len >= max) {
 	    	$('#char-count').text(' you have reached the limit'); // displays char count
 	    	$('#tweet-submit').hide(); //hide tweet button when char limit reached
-	  	}
-	 	else {
+	  	}else {
 	 		var char = max - len;
 	  		$('#char-count').text(char);
 	  		$('#tweet-submit').show();
@@ -22,6 +21,13 @@ $(document).ready(function(){
   		return len; 
 	});
 
-	
-
+	$(".tweet-compose").keyup(function(){
+		var char = $(this).val().length;
+		if(char >= 130){
+			$("#char-count").css('color', 'red'); 
+		}
+		else{
+			$("#char-count").css('color', 'black');
+		}
+	})
 })

@@ -17,5 +17,16 @@ $(document).ready(function(){
 		}
 	}
 
+	/* add tweet */
+	$('#tweet-Submit').click(function(e){
+		e.preventDefault(); 
+		var username =  $('#username'); 
+
+		return $.ajax({
+			method: 'POST', 
+			url: 
+		})
+	})
+
 
 })
