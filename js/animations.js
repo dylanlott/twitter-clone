@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$(".tweet-compose").on('click', function(){
 		$(this).css('height', '5em');
 		$("#tweet-controls").show(); 
-	})
+	});
 
 	$('.tweet-compose').keyup(function(){
 	  	var max = 140; // set max char count 
@@ -24,10 +24,13 @@ $(document).ready(function(){
 	$(".tweet-compose").keyup(function(){
 		var char = $(this).val().length;
 		if(char >= 130){
-			$("#char-count").css('color', 'red'); 
+			$("#char-count").css('color', 'red');
+			$("#tweet-submit").hide();  
 		}
 		else{
 			$("#char-count").css('color', 'black');
 		}
-	})
-})
+	});
+
+	$(".tweet-actions").hover
+});
